@@ -1,0 +1,40 @@
+<!-- <div *ngFor="let favorite of arr">
+  <p> {{ favorite.id }} </p>
+  <p> {{ favorite.name }} </p>
+  <img [src]="favorite.image" alt={{favorite.name}}>
+  <button (click)="deleteFav(favorite.id)">delete</button>
+
+
+</div> -->
+
+<div class="card-container">
+  <div *ngFor="let favorite of arr">
+    <mat-card class="card-grid example-card mat-elevation-z8">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{favorite.name}}</mat-card-title>
+        <mat-card-subtitle>{{favorite.species}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="favorite.image" alt={{favorite.name}}>
+      <mat-card-content>
+        <p>
+          {{favorite.gender}}
+          <br>
+          {{ favorite.status }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="deleteFav(favorite.id)">
+          <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+        </button>
+        <!-- <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button> -->
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+</div>
+
+
+
+<button (click)="clearAll()">Delete All</button>

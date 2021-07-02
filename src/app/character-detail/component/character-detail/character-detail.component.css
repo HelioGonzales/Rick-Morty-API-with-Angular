@@ -1,0 +1,13 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  margin-top: 2rem;
+}
+
+.example-card {
+  width: 40%;
+}
